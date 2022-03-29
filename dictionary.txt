@@ -1,0 +1,55 @@
+declare -A dice
+
+
+
+dice[leftroll]="2,4,6"
+
+dice[rightroll]="3,1,5"
+
+dice[upperroll]="2,1,4"
+
+dice[downroll]="3,5,6"
+
+
+
+echo ****creation****
+
+echo "Before Creation : ${dice[*]}"
+
+dice[rollonce]="2,5,1"
+
+dice[againroll]="2,4,6"
+
+echo "After Creation : ${dice[*]}"
+
+
+
+echo ****Read****
+
+echo "Retrieve All : ${dice[*]}"
+
+echo "not retrive anything : ${dice[*]}"
+
+
+
+echo ****Update****
+
+echo "Before Update : ${dice[*]}"
+
+dice[three_times_roll]="2,3,5,2,6,3,2,6,1"
+
+dice[two_times_roll]="2,4,6,5,2,3"
+
+echo "After Update : ${dice[*]}"
+
+
+
+echo "Display Only Keys : ${!dice[*]}"
+
+echo "Length Of An Dictionary ${#dice[*]}"
+
+
+
+
+
+echo "************************************"
